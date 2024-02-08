@@ -21,17 +21,48 @@
             <TextView
                 android:id="@+id/tvActionMovie"
                 android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_middle"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/common_padding_min"
-                android:layout_marginTop="@dimen/common_padding_middle"
                 android:text="@string/tv_popular_movies"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/recyclerMovies"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/icSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_padding_min"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@id/etFilter"
+                app:layout_constraintEnd_toStartOf="@id/etFilter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etFilter"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:layout_marginEnd="@dimen/common_padding_min"
+                android:backgroundTint="@color/white"
+                android:hint="@string/et_hint_search"
+                android:textColor="@color/white"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/recyclerMovies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icSearch"
+                app:layout_constraintTop_toBottomOf="@id/tvActionMovie" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerMovies"
@@ -42,7 +73,7 @@
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvActionMovie"
+                app:layout_constraintTop_toBottomOf="@id/etFilter"
                 app:spanCount="2"
                 tools:listitem="@layout/item_movie" />
 

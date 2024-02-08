@@ -1,4 +1,4 @@
-package com.example.ontopapp.ui
+package com.example.ontopapp.ui.common
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import java.text.DecimalFormat
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = true): View =
     LayoutInflater.from(context).inflate(layoutRes, this, attachToRoot)
@@ -107,3 +108,5 @@ fun Context.errorToString(error: Error) = when (error) {
     is Error.Unknown -> getString(R.string.unknown_error) + error.message
     else -> { getString(R.string.generic_error) }
 }
+
+fun Double.format(): String = DecimalFormat("#,##0").format(this)

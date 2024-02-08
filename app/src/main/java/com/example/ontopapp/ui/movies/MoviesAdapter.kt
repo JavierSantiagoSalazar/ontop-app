@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ontopapp.R
 import com.example.ontopapp.databinding.ItemMovieBinding
 import com.example.ontopapp.domain.models.Movie
-import com.example.ontopapp.ui.basicDiffUtil
-import com.example.ontopapp.ui.inflate
-import com.example.ontopapp.ui.loadUrl
+import com.example.ontopapp.ui.common.basicDiffUtil
+import com.example.ontopapp.ui.common.inflate
+import com.example.ontopapp.ui.common.loadUrl
 
 class MoviesAdapter(private val listener: (Movie) -> Unit) :
     ListAdapter<Movie, MoviesAdapter.ViewHolder>(basicDiffUtil { old, new -> old.id == new.id }) {
