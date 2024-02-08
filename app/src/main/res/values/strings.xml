@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">OnTopApp</string>
+    <string name="menu_nav_bar_movies">Movies</string>
+    <string name="menu_nav_bar_phrase">Phrase</string>
+    <string name="menu_nav_bar_password">Password</string>
+
+    <string name="tv_popular_movies">Popular Movies</string>
+
+    <string name="connectivity_error">Looks like you don\'t have internet connection, please try again.</string>
+    <string name="snack_bar_try_again_message">Try again</string>
+    <string name="server_error">"Internal server error with code: "</string>
+    <string name="unknown_error">"Unknown error: "</string>
+    <string name="snack_bar_dismiss_message">Dismiss</string>
+    <string name="generic_error">A strange error has occurred.</string>
 </resources>
