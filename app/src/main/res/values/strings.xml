@@ -13,6 +13,13 @@
     <string name="tv_original_sentence">Original Sentence</string>
     <string name="tv_converted_sentence">Converted Sentence</string>
 
+    <string name="tv_generate_password">Generate Password</string>
+    <string name="btn_generate_password">Generate new password</string>
+    <string name="tv_generated_password">Generated \n password</string>
+    <string name="tv_copy">Copy</string>
+    <string name="tv_copied">Copied!</string>
+
+
     <!--Errors-->
     <string name="connectivity_error">Looks like you don\'t have internet connection, please try again.</string>
     <string name="empty_edit_text">You cannot place an empty sentence</string>
@@ -29,5 +36,7 @@
     <string name="ic_bar">|</string>
     <string name="tv_release_date">Release date</string>
     <string name="tv_total_votes">Total votes: </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

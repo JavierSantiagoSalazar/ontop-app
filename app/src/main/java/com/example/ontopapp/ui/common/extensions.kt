@@ -1,6 +1,8 @@
 package com.example.ontopapp.ui.common
 
 import android.app.Activity
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -173,4 +175,33 @@ fun Activity.hideKeyboard() {
         view = View(this)
     }
     imm.hideSoftInputFromWindow(view.windowToken, 0)
+}
+
+fun generatePassword(): String {
+    val currentTime = System.currentTimeMillis()
+    val length = (currentTime % 16).toInt() + 5
+
+    val allowedChars = StringBuilder().apply {
+        append('A'..'Z')
+        append('a'..'z')
+        append(0..9)
+        append("!@#$%^&*()_+-=[]{}|;':,.<>?")
+    }
+
+    val password = buildString {
+        var seed = currentTime
+        for (i in 0 until length) {
+            seed = (seed * 1103515245 + 12345) % (1L shl 31)
+            val randomIndex = (seed % allowedChars.length).toInt()
+            append(allowedChars[randomIndex])
+        }
+    }
+
+    return password
+}
+
+fun Context.copyToClipboard(text: String) {
+    val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+    val clipData = ClipData.newPlainText("Text", text)
+    clipboardManager.setPrimaryClip(clipData)
 }

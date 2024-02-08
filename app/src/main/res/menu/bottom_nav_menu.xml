@@ -12,7 +12,7 @@
         android:title="@string/menu_nav_bar_phrase"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/settings_dest"
+        android:id="@+id/password_dest"
         android:icon="@drawable/ic_key"
         android:title="@string/menu_nav_bar_password"
         app:showAsAction="ifRoom" />

@@ -33,4 +33,9 @@
         android:name="com.example.ontopapp.ui.phrase.PhraseFragment"
         android:label="fragment_phrase"
         tools:layout="@layout/fragment_phrase" />
+    <fragment
+        android:id="@+id/password_dest"
+        android:name="com.example.ontopapp.ui.password.PasswordFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" />
 </navigation>
