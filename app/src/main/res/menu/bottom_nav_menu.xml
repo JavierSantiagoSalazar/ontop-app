@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/on_boarding_dest"
+        android:id="@+id/movies_dest"
         android:icon="@drawable/ic_tv"
         android:title="@string/menu_nav_bar_movies"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/reminders_dest"
+        android:id="@+id/phrase_dest"
         android:icon="@drawable/ic_abc"
         android:title="@string/menu_nav_bar_phrase"
         app:showAsAction="ifRoom" />

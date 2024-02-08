@@ -7,8 +7,15 @@
     <string name="tv_popular_movies">Popular Movies</string>
     <string name="et_hint_search">Search for a movie</string>
 
+    <string name="tv_phrase">Phrase Uppercase</string>
+    <string name="et_hint_phrase">Write a sentence</string>
+    <string name="btn_convert_phrase">Convert sentence</string>
+    <string name="tv_original_sentence">Original Sentence</string>
+    <string name="tv_converted_sentence">Converted Sentence</string>
+
     <!--Errors-->
     <string name="connectivity_error">Looks like you don\'t have internet connection, please try again.</string>
+    <string name="empty_edit_text">You cannot place an empty sentence</string>
     <string name="snack_bar_try_again_message">Try again</string>
     <string name="server_error">"Internal server error with code: "</string>
     <string name="unknown_error">"Unknown error: "</string>

@@ -1,9 +1,11 @@
 package com.example.ontopapp.ui.common
 
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
@@ -70,7 +72,6 @@ fun View.showErrorSnackBar(error: Error, action: () -> Unit) {
                 action()
             }
         }
-
         else -> this.showSnackBar(this.context.errorToString(error))
     }
 }
@@ -104,9 +105,72 @@ fun View.showNoInternetConnectionSnackBar(
 
 fun Context.errorToString(error: Error) = when (error) {
     Error.Connectivity -> getString(R.string.connectivity_error)
+    Error.EmptyEditText -> getString(R.string.empty_edit_text)
     is Error.Server -> getString(R.string.server_error) + error.code
     is Error.Unknown -> getString(R.string.unknown_error) + error.message
-    else -> { getString(R.string.generic_error) }
+    else -> {
+        getString(R.string.generic_error)
+    }
 }
 
 fun Double.format(): String = DecimalFormat("#,##0").format(this)
+
+fun convertSentence(sentence: String) = returnUppercasedSentence(
+    uppercaseFirstLetterOfSentence(
+        splitSentence(sentence)
+    )
+)
+
+
+private fun splitSentence(sentence: String): List<String> {
+    val words = mutableListOf<String>()
+    var currentWord = ""
+
+    for (char in sentence) {
+        if (char == ' ') {
+            if (currentWord != " ") {
+                words.add(currentWord)
+                currentWord = ""
+            }
+            words.add(char.toString())
+        } else {
+            currentWord += char
+        }
+    }
+
+    if (currentWord != "") {
+        words.add(currentWord)
+    }
+
+    return words
+}
+
+private fun uppercaseFirstLetterOfSentence(words: List<String>): List<String> {
+    val uppercasedWords = mutableListOf<String>()
+    for (word in words) {
+        val capitalizedWord = if (word != "") {
+            word.substring(0, 1).uppercase() + word.substring(1)
+        } else {
+            word
+        }
+        uppercasedWords.add(capitalizedWord)
+    }
+    return uppercasedWords
+}
+
+private fun returnUppercasedSentence(words: List<String>): String {
+    var sentence = ""
+    for (word in words) {
+        sentence += word
+    }
+    return sentence
+}
+
+fun Activity.hideKeyboard() {
+    val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    var view = currentFocus
+    if (view == null) {
+        view = View(this)
+    }
+    imm.hideSoftInputFromWindow(view.windowToken, 0)
+}
