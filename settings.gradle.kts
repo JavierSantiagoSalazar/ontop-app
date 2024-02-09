@@ -15,4 +15,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "OnTopApp"
 include(":app")
- 
+include(":domain")
+include(":data")
+include(":usecases")
+include(":testShared")
+include(":appTestShared")

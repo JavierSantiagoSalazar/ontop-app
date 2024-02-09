@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">OnTopApp</string>
+    <string name="menu_nav_bar_movies">Movies</string>
+    <string name="menu_nav_bar_phrase">Phrase</string>
+    <string name="menu_nav_bar_password">Password</string>
+
+    <string name="tv_popular_movies">Popular Movies</string>
+    <string name="et_hint_search">Search for a movie</string>
+
+    <string name="tv_phrase">Phrase Uppercase</string>
+    <string name="et_hint_phrase">Write a sentence</string>
+    <string name="btn_convert_phrase">Convert sentence</string>
+    <string name="tv_original_sentence">Original Sentence</string>
+    <string name="tv_converted_sentence">Converted Sentence</string>
+
+    <string name="tv_generate_password">Generate Password</string>
+    <string name="btn_generate_password">Generate new password</string>
+    <string name="tv_generated_password">Generated \n password</string>
+    <string name="tv_copy">Copy</string>
+    <string name="tv_copied">Copied!</string>
+
+
+    <!--Errors-->
+    <string name="connectivity_error">Looks like you don\'t have internet connection, please try again.</string>
+    <string name="empty_edit_text">You cannot place an empty sentence</string>
+    <string name="snack_bar_try_again_message">Try again</string>
+    <string name="server_error">"Internal server error with code: "</string>
+    <string name="unknown_error">"Unknown error: "</string>
+    <string name="snack_bar_dismiss_message">Dismiss</string>
+    <string name="generic_error">A strange error has occurred.</string>
+
+    <!--Detail Fragment-->
+    <string name="ic_share">Share</string>
+    <string name="ic_download">Download</string>
+    <string name="ic_favorite">Favorite</string>
+    <string name="ic_bar">|</string>
+    <string name="tv_release_date">Release date</string>
+    <string name="tv_total_votes">Total votes: </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
