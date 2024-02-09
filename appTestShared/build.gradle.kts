@@ -36,5 +36,5 @@ dependencies {
     implementation(project(":app"))
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation(com.example.ontopapp.buildsrc.Libs.Kotlin.Coroutines.core)
 }

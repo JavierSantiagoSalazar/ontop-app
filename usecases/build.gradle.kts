@@ -1,3 +1,5 @@
+import com.example.ontopapp.buildsrc.Libs
+
 plugins {
     id("java-library")
     id("org.jetbrains.kotlin.jvm")
@@ -10,18 +12,12 @@ java {
 dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
+    implementation(Libs.Kotlin.Coroutines.core)
+    implementation(Libs.JavaX.inject)
 
-    // JavaInject
-    implementation("javax.inject:javax.inject:1")
-
-    // Coroutines core
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
-
-    // Arrow
-    implementation("io.arrow-kt:arrow-core:1.1.5")
     testImplementation(project(":testShared"))
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
-    testImplementation("org.mockito:mockito-inline:4.4.0")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    testImplementation(Libs.JUnit.junit)
+    testImplementation(Libs.Mockito.kotlin)
+    testImplementation(Libs.Mockito.inline)
+    testImplementation(Libs.Kotlin.Coroutines.test)
 }
