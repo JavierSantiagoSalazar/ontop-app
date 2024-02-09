@@ -19,4 +19,10 @@ dependencies {
 
     // Arrow
     implementation("io.arrow-kt:arrow-core:1.1.5")
+
+    testImplementation(project(":testShared"))
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+    testImplementation("org.mockito:mockito-inline:4.4.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
 }
